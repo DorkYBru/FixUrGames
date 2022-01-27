@@ -1,0 +1,76 @@
+h2 {
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+:root {
+    --background: hsl(240, 80%, 10%);
+  }
+  html, 
+  body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    background: 
+      radial-gradient(
+        60vmax 60vmax at 0% 0%, 
+        hsla(240, 100%, 2%, 0.9) 0%, 
+        hsla(240, 100%, 2%, 0) 95%),
+      radial-gradient(
+        80vmax 50vmax at 110% -10%, 
+        hsla(175, 100%, 60%, 0.9) 0%, 
+        hsla(200, 100%, 50%, 0.5) 50%, 
+        hsla(240, 100%, 50%, 0) 95%), 
+      radial-gradient(
+        90vmax 50vmax at 50vmax 50vmax, 
+        hsla(260, 100%, 60%, 0.9) 0%, 
+        hsla(240, 100%, 60%, 0) 95%)
+      var(--background);
+    /*
+    &::before, 
+    &::after {
+      top: 0%;
+      left: -30%;
+      content: "";
+      position: absolute;
+      width: 60vw;
+      height: 40vh;
+      background: radial-gradient(50% 50%, hsla(190, 100%, 50%, 0.3), hsla(190, 20%, 100%, 0) 90%);
+    }
+    &::before {
+      transform: rotate(15deg);
+    }
+    &::after {
+      transform: rotate(60deg);
+    }
+    */
+  }
+  
+  h1 {
+    color: hsla(180, 100%, 60%, 1);
+    font-size: 3.5rem;
+    font-weight: normal;
+    letter-spacing: -0.025em;
+    margin: 0;
+  }
+  p {
+    color: hsla(240, 100%, 100%, 1);
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    max-width: 50ch;
+    margin: 0 auto;
+    @media only screen and (min-width: 50ch) {
+      padding: 1rem;
+    }
+  }

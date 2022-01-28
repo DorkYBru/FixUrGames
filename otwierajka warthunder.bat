@@ -1,5 +1,5 @@
-@echo off
-echo "wlacz wt i kliknij na ta probowke tak jak on na tym filmiku, wtedy ci sie pojawi pojazd z napisami sample"
+﻿@echo off
+echo "wlacz wt i kliknij na ta probowke na dole, wtedy ci sie pojawi pojazd z napisami sample"
 set /p tak="Zrestartuj WT jak to zrobisz przejdz dalej.Aby przejsc dalej napisz cokolwiek"
 mkdir UserSkins
 start .\UserSkins

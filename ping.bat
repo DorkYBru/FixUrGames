@@ -9,6 +9,7 @@ wmic process where name="svchost.exe" CALL setpriority "idle"
 ping 127.0.0.1 -n 5 >nul
 wmic process where name="javaw.exe" CALL setpriority "high priority"
 wmic process where name="javaw.exe" CALL setpriority "high priority"
+ipconfig /flushdns
 sc start BITS
 goto LOGO
 :LOGO

@@ -34,8 +34,8 @@ netsh int ip reset
 netsh int tcp reset
 netsh int ipv4 reset reset.log
 netsh int ipv6 reset reset.log
-netsh interface ipv4 set dns name=”Wi-Fi” static 9.9.9.9
-netsh interface ipv4 set dns name=”Wi-Fi” static 149.112.112.112 index=2.
+netsh interface ipv4 set dns name=”Wi-Fi” static 1.1.1.1
+netsh interface ipv4 set dns name=”Wi-Fi” static 1.0.0.1 index=2.
 ipconfig /release
 ipconfig /renew
 ipconfig /flushdns

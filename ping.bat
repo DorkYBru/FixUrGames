@@ -4,7 +4,9 @@ if not "%1"=="am_admin" (
     powershell -Command "Start-Process -Verb RunAs -FilePath '%0' -ArgumentList 'am_admin'"
     exit /b
 )
-
+echo|(set /p="Creating restore point" & echo.)
+Wmic.exe /Namespace:\\root\default Path SystemRestore Call CreateRestorePoint "Ping Restore Point", 100, 7
+cls
 wmic process where name="svchost.exe" CALL setpriority "idle"
 ping 127.0.0.1 -n 5 >nul
 wmic process where name="javaw.exe" CALL setpriority "high priority"
@@ -93,52 +95,22 @@ REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\In
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TcpDelAckTicks /t REG_DWORD /d 0 /f
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TcpAckFrequency /t REG_DWORD /d 1 /f
 cls
-echo|(set /p="Windows Registry Editor Version 5.00
-
-[HKLM\System\CurrentControlSet\Services\Tcpip\Parameters]
-"SizReqBuf"=dword:59819
-"TCPInitalRtt"=dword:49697
-"TcpMaxDupAcks"=dword:1
-"DefaultTTL"=dword:64
-"EnablePMTUDiscovery"=dword:1
-"Tcp1323Opts"=dword:1
-"EnablePMTUBHDetect"=dword:1
-"MaxUserPort"=dword:65534 
-"MaxFreeTcbs"=dword:65535 
-"SackOpts"=dword:1
-"TcpMaxDataRetransmissions"=dword:5
-"EnableDCA"=dword:1
-"EnableWsd"=dword:0
-"DisableTaskOffload"=dword:0
-"TcpTimedWaitDelay"=dword:18e
-"TcpFinWait2Delay"=dword:18e
-"StrictTimeWaitSeqCheck"=dword:1
-"TcpCreateAndConnectTcbRateLimitDepth"=dword:0
-"TCPDelAckTicks"=dword:0
-"TCPNoDelay"=dword:1
-"TcpAckFrequency"=dword:5
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces]
-"IPAutoconfigurationEnabled"=dword:0
-"TCPDelAckTicks"=dword:0
-"TCPNoDelay"=dword:1
-"TcpAckFrequency"=dword:5
-
-[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\ServiceProvider]
-"Class"=dword:8
-"DnsPriority"=dword:96
-"HostsPriority"=dword:95
-"NetbtPriority"=dword:97
-"LocalPriority"=dword:94
-
-[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows]
-"NonBestEffortLimit"=dword:00000000" & echo.)
-
- 
+curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/iping.reg > iping.reg
+start iping.reg
+cls
+echo|(set /p="click yes" & echo.)
+pause
+del iping.reg
 goto LOGO
 :LOGO
 cls
 color 0b
-echo "No Lag <3"
+echo|(set /p="No lag <3" & echo.)
 start https://dorkybru.github.io/FixUrGames/ty.html
 pause
+
+
+
+
+
+

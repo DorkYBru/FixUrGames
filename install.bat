@@ -9,17 +9,26 @@ curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/FPS-Boost.reg -o
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/OnlineGamesBoost.reg -o ogb.reg
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/UninstallMsftBloat.ps1 -o umb.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/FasterPC-Shutdown.reg -o fpss.reg
-start dai.ps1
-start dca.ps1
-start dc.ps1
-start ddt.ps1
-start dss.ps1
-start dt.ps1
+Powershell.exe -executionpolicy remotesigned -File "dai.ps1"
+Powershell.exe -executionpolicy remotesigned -File "dca.ps1"
+Powershell.exe -executionpolicy remotesigned -File "dc.ps1"
+Powershell.exe -executionpolicy remotesigned -File "ddt.ps1"
+Powershell.exe -executionpolicy remotesigned -File "dss.ps1"
+Powershell.exe -executionpolicy remotesigned -File "dt.ps1"
 start fps.reg
 start ogb.reg
-start umb.ps1
+Powershell.exe -executionpolicy remotesigned -File "umb.ps1"
 start fpss.reg
-
+del dai.ps1
+del dca.ps1
+del dc.ps1
+del ddt.ps1
+del dss.ps1
+del dt.ps1
+del fps.reg
+del ogb.reg
+del umb.ps1
+del fpss.reg
 
 
 

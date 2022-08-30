@@ -1,4 +1,9 @@
 @echo off
+if not "%1"=="am_admin" (
+    powershell -Command "Start-Process -Verb RunAs -FilePath 'cmd' -ArgumentList 'am_admin'"
+    exit /b
+)
+cls
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableAdvertisingID.ps1 -o dai.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableConsumerApps.ps1 -o dca.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableCortana.ps1 -o dc.ps1
@@ -65,8 +70,8 @@ set "Network=%Network:~1%"
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TCPNoDelay /t REG_DWORD /d 1 /f
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TcpDelAckTicks /t REG_DWORD /d 0 /f
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TcpAckFrequency /t REG_DWORD /d 1 /f
-
-
+del inst.bat
+exit
 
 
 

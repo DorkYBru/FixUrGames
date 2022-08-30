@@ -1,0 +1,28 @@
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"ClearPageFileAtShutdown"=hex(b):00,00,00,00,00,00,00,00
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control]
+"BootDriverFlags"=dword:0000001c
+"CurrentUser"="USERNAME"
+"EarlyStartServices"=hex(7):52,00,70,00,63,00,53,00,73,00,00,00,50,00,6f,00,77,\ 
+00,65,00,72,00,00,00,42,00,72,00,6f,00,6b,00,65,00,72,00,49,00,6e,00,66,00,\ 
+72,00,61,00,73,00,74,00,72,00,75,00,63,00,74,00,75,00,72,00,65,00,00,00,53,\ 
+00,79,00,73,00,74,00,65,00,6d,00,45,00,76,00,65,00,6e,00,74,00,73,00,42,00,\ 
+72,00,6f,00,6b,00,65,00,72,00,00,00,44,00,63,00,6f,00,6d,00,4c,00,61,00,75,\ 
+00,6e,00,63,00,68,00,00,00,52,00,70,00,63,00,45,00,70,00,4d,00,61,00,70,00,\ 
+70,00,65,00,72,00,00,00,4c,00,53,00,4d,00,00,00,41,00,70,00,70,00,49,00,64,\ 
+00,53,00,76,00,63,00,00,00,00,00 
+"PreshutdownOrder"=hex(7):55,00,73,00,6f,00,53,00,76,00,63,00,00,00,44,00,65,\ 
+00,76,00,69,00,63,00,65,00,49,00,6e,00,73,00,74,00,61,00,6c,00,6c,00,00,00,\ 
+67,00,70,00,73,00,76,00,63,00,00,00,74,00,72,00,75,00,73,00,74,00,65,00,64,\ 
+00,69,00,6e,00,73,00,74,00,61,00,6c,00,6c,00,65,00,72,00,00,00,00,00 
+"SvcHostSplitThresholdInKB"=dword:00380000
+"WaitToKillServiceTimeout"="2000"
+"SystemStartOptions"=" NOEXECUTE=OPTIN"
+"SystemBootDevice"="multi(0)disk(0)rdisk(0)partition(2)"
+"FirmwareBootDevice"="multi(0)disk(0)rdisk(0)partition(1)"
+"LastBootSucceeded"=dword:00000001
+"LastBootShutdown"=dword:00000001
+"DirtyShutdownCount"=dword:00000025
+"AutoEndTasks"=hex(b):01,00,00,00,00,00,00,00
+"WaitToKillAppTimeout"=hex(b):f4,01,00,00,00,00,00,00

@@ -5,20 +5,14 @@ curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableCortana.p
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableDiagTrack.ps1 -o ddt.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableSmartScreen.ps1 -o dss.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableTelemetry.ps1 -o dt.ps1
-curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/FPS-Boost.reg -o fps.reg
-curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/OnlineGamesBoost.reg -o ogb.reg
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/UninstallMsftBloat.ps1 -o umb.ps1
-curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/FasterPC-Shutdown.reg -o fpss.reg
 Powershell.exe -executionpolicy remotesigned -File "dai.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dca.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dc.ps1"
 Powershell.exe -executionpolicy remotesigned -File "ddt.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dss.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dt.ps1"
-start fps.reg
-start ogb.reg
 Powershell.exe -executionpolicy remotesigned -File "umb.ps1"
-start fpss.reg
 del dai.ps1
 del dca.ps1
 del dc.ps1

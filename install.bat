@@ -1,9 +1,4 @@
 @echo off
-if not "%1"=="am_admin" (
-    powershell -Command "Start-Process -Verb RunAs -FilePath 'cmd' -ArgumentList 'am_admin'"
-    exit /b
-)
-cls
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableAdvertisingID.ps1 -o dai.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableConsumerApps.ps1 -o dca.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableCortana.ps1 -o dc.ps1

@@ -20,16 +20,6 @@ Powershell.exe -executionpolicy remotesigned -File "ddt.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dss.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dt.ps1"
 Powershell.exe -executionpolicy remotesigned -File "umb.ps1"
-del dai.ps1
-del dca.ps1
-del dc.ps1
-del ddt.ps1
-del dss.ps1
-del dt.ps1
-del fps.reg
-del ogb.reg
-del umb.ps1
-del fpss.reg
 for /f "delims=: tokens=2" %%n in ('netsh lan show interface ^| findstr "Name"') do set "Network=%%n"
 set "Network=%Network:~1%"
 netsh interface ipv4 set subinterface "%Network%" mtu=%mtu% store=persistent

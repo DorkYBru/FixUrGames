@@ -6,6 +6,13 @@ curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableDiagTrack
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableSmartScreen.ps1 -o dss.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/DisableTelemetry.ps1 -o dt.ps1
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/UninstallMsftBloat.ps1 -o umb.ps1
+attrib +r dai.ps1
+attrib +r dca.ps1
+attrib +r dc.ps1
+attrib +r ddt.ps1
+attrib +r dss.ps1
+attrib +r dt.ps1
+attrib +r umb.ps1
 Powershell.exe -executionpolicy remotesigned -File "dai.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dca.ps1"
 Powershell.exe -executionpolicy remotesigned -File "dc.ps1"

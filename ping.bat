@@ -96,10 +96,7 @@ REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\In
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters\Interfaces\{%Network%} /v TcpAckFrequency /t REG_DWORD /d 1 /f
 cls
 curl https://raw.githubusercontent.com/DorkYBru/FixUrGames/main/iping.reg > iping.reg
-start iping.reg
-cls
-echo|(set /p="click yes" & echo.)
-pause
+reg import iping.reg
 del iping.reg
 goto LOGO
 :LOGO
